@@ -928,26 +928,36 @@ footer a:hover { color: var(--peach); }
 @media (max-width: 768px) {
   .hamburger { display: flex; }
   nav ul {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     background: var(--white);
-    flex-direction: column;
-    gap: 0;
-    padding: 0.5rem 0;
     box-shadow: var(--shadow-md);
     border-top: 1px solid var(--line);
     z-index: 99;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.35s ease, opacity 0.25s ease;
   }
-  nav ul.open { display: flex; }
+  nav ul.open { max-height: 400px; opacity: 1; padding: 0.5rem 0; }
   nav a {
     padding: 0.875rem 2rem;
     display: block;
     font-size: 1rem;
     border-bottom: 1px solid var(--line);
   }
+  .topbar-contact { display: flex; gap: 0.5rem; }
+  .topbar-contact a { width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.12); display: inline-flex; align-items: center; justify-content: center; gap: 0; font-size: 0; }
+  .topbar-contact a svg { flex-shrink: 0; }
+  .topbar-wrap { justify-content: center; gap: 0.75rem; }
+  .topbar { padding: 0.375rem 0; }
+  .nav-wrap { padding: 1.25rem 0; }
+  .logo-link img { height: 56px; }
 }
 
 /* ===== RESPONSIVE ===== */

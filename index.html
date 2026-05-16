@@ -928,20 +928,23 @@ footer a:hover { color: var(--peach); }
 @media (max-width: 768px) {
   .hamburger { display: flex; }
   nav ul {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     background: var(--white);
-    flex-direction: column;
-    gap: 0;
-    padding: 0.5rem 0;
     box-shadow: var(--shadow-md);
     border-top: 1px solid var(--line);
     z-index: 99;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.35s ease, opacity 0.25s ease;
   }
-  nav ul.open { display: flex; }
+  nav ul.open { max-height: 400px; opacity: 1; padding: 0.5rem 0; }
   nav a {
     padding: 0.875rem 2rem;
     display: block;
