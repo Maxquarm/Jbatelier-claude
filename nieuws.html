@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nieuws &middot; JB-atelier</title>
 <meta name="description" content="Nieuws, projecten en activiteiten van het JB-atelier in Arnhem.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="JB-atelier">
+<meta property="og:title" content="Nieuws · JB-atelier">
+<meta property="og:description" content="Nieuws, projecten en activiteiten van het JB-atelier in Arnhem.">
+<meta property="og:url" content="https://maxquarm.github.io/Jbatelier-claude/nieuws.html">
+<meta property="og:image" content="https://www.jb-atelier.nl/wp-content/uploads/2025/12/workshop-sieraad.jpg">
 <link rel="icon" href="https://www.jb-atelier.nl/wp-content/uploads/2023/08/cropped-favicon2-32x32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -958,6 +964,7 @@ footer a:hover { color: var(--peach); }
   .topbar { padding: 0.375rem 0; }
   .nav-wrap { padding: 1.25rem 0; }
   .logo-link img { height: 56px; }
+  .page-header { padding: 1.5rem 0 1rem; }
 }
 
 /* ===== RESPONSIVE ===== */
@@ -1071,7 +1078,7 @@ footer a:hover { color: var(--peach); }
 
       <article class="news-card">
         <div class="news-image">
-          <img src="https://www.jb-atelier.nl/wp-content/uploads/2025/12/workshop-sieraad.jpg" alt="Workshop recycle sieraad">
+          <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2025/12/workshop-sieraad.jpg" alt="Workshop recycle sieraad">
         </div>
         <div class="news-body">
           <span class="news-tag">Workshop</span>
@@ -1087,7 +1094,7 @@ footer a:hover { color: var(--peach); }
 
       <article class="news-card">
         <div class="news-image">
-          <img src="https://www.jb-atelier.nl/wp-content/uploads/2025/12/Aanbiedingen.jpg" alt="Aanbiedingen in het atelier">
+          <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2025/12/Aanbiedingen.jpg" alt="Aanbiedingen in het atelier">
         </div>
         <div class="news-body">
           <span class="news-tag">Atelier</span>
@@ -1103,7 +1110,7 @@ footer a:hover { color: var(--peach); }
 
       <article class="news-card">
         <div class="news-image">
-          <img src="https://www.jb-atelier.nl/wp-content/uploads/2025/11/winter.jpg" alt="Wintermarkt in de Lommerd">
+          <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2025/11/winter.jpg" alt="Wintermarkt in de Lommerd">
         </div>
         <div class="news-body">
           <span class="news-tag">Markt</span>
@@ -1120,7 +1127,7 @@ footer a:hover { color: var(--peach); }
 
       <article class="news-card">
         <div class="news-image">
-          <img src="https://www.jb-atelier.nl/wp-content/uploads/2025/09/flipperkast-scaled.webp" alt="Flipperkast project">
+          <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2025/09/flipperkast-scaled.webp" alt="Flipperkast project">
         </div>
         <div class="news-body">
           <span class="news-tag">Techniekles</span>
@@ -1137,7 +1144,7 @@ footer a:hover { color: var(--peach); }
 
       <article class="news-card">
         <div class="news-image">
-          <img src="https://www.jb-atelier.nl/wp-content/uploads/2023/09/brug-presikhaaf-collage-1.jpg" alt="Brug Presikhaaf project">
+          <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2023/09/brug-presikhaaf-collage-1.jpg" alt="Brug Presikhaaf project">
         </div>
         <div class="news-body">
           <span class="news-tag">Project</span>
@@ -1154,7 +1161,7 @@ footer a:hover { color: var(--peach); }
 
       <article class="news-card">
         <div class="news-image">
-          <img src="https://www.jb-atelier.nl/wp-content/uploads/2026/04/G.Perez-teacher-and-kid.jpg" alt="Interview wijkkrant Spijkerkwartier">
+          <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2026/04/G.Perez-teacher-and-kid.jpg" alt="Interview wijkkrant Spijkerkwartier">
         </div>
         <div class="news-body">
           <span class="news-tag">Interview</span>
@@ -1272,7 +1279,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const lightbox = document.createElement('div');
   lightbox.className = 'lightbox';
-  lightbox.innerHTML = '<button class="lightbox-close" aria-label="Sluiten">&times;</button><img alt="">';
+  lightbox.innerHTML = '<button class="lightbox-close" aria-label="Sluiten">&times;</button><img loading="lazy" alt="">';
   document.body.appendChild(lightbox);
 
   const img = lightbox.querySelector('img');
