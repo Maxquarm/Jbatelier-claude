@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Over Jacqueline &middot; JB-atelier</title>
+<meta name="description" content="Over Jacqueline Brincker: beeldend kunstenaar en vakdocent kunst en beeldende vorming.">
+<link rel="icon" href="https://www.jb-atelier.nl/wp-content/uploads/2023/08/cropped-favicon2-32x32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   JB-atelier - Verfijnd concept
+   ============================================================ */
+
+:root {
+  --primary:        #004996;
+  --navy:           #151b4f;
+  --accent:         #fa5c0c;
+  --accent-2:       #e64034;
+  --peach:          #f9c5af;
+  --peach-light:    #ffdad0;
+  --bg:             #f2efef;
+  --body:           #666666;
+  --white:          #ffffff;
+  --line:           rgba(21, 27, 79, 0.08);
+  --shadow-sm:      0 1px 2px rgba(21, 27, 79, 0.04), 0 1px 3px rgba(21, 27, 79, 0.06);
+  --shadow-md:      0 4px 12px rgba(21, 27, 79, 0.06), 0 2px 4px rgba(21, 27, 79, 0.04);
+  --shadow-lg:      0 12px 32px rgba(21, 27, 79, 0.08), 0 4px 8px rgba(21, 27, 79, 0.04);
+  --radius-sm:      4px;
+  --radius-md:      6px;
+  --ease:           cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--body);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 500;
+  color: var(--primary);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 3.75rem); font-weight: 600; }
+h2 { font-size: clamp(1.875rem, 3.5vw, 2.5rem); margin-bottom: 1.25rem; }
+h3 { font-size: 1.375rem; font-weight: 600; margin-bottom: 0.75rem; }
+h4 { font-size: 1.0625rem; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; }
+
+p { margin-bottom: 1.125rem; }
+
+a { color: var(--accent); text-decoration: none; transition: color 0.2s var(--ease); }
+a:hover { color: var(--accent-2); }
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+  background: var(--primary);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.8125rem;
+  padding: 0.5rem 0;
+}
+
+.topbar-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.topbar-contact {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.topbar-contact a {
+  color: rgba(255, 255, 255, 0.92);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s var(--ease);
+}
+
+.topbar-contact a:hover { color: var(--peach); }
+
+.topbar-social {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.topbar-social a {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  transition: all 0.2s var(--ease);
+}
+
+.topbar-social a:hover {
+  background: var(--accent);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 560px) {
+  .topbar { font-size: 0.75rem; }
+  .topbar-wrap { justify-content: center; }
+  .topbar-contact { gap: 1rem; justify-content: center; }
+}
+
+/* ===== HEADER ===== */
+header {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: saturate(180%) blur(10px);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo-link { display: flex; align-items: center; gap: 0.75rem; }
+.logo-link img { height: 48px; width: auto; display: block; }
+
+nav ul {
+  display: flex;
+  gap: 2.25rem;
+  list-style: none;
+}
+
+nav a {
+  color: var(--navy);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1.5px;
+  background: var(--accent);
+  transition: width 0.3s var(--ease);
+}
+
+nav a:hover { color: var(--primary); }
+nav a:hover::after, nav a.active::after { width: 100%; }
+nav a.active { color: var(--primary); }
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: var(--accent);
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:hover {
+  background: var(--accent-2);
+  color: var(--white);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+.btn:active { transform: translateY(0); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+  box-shadow: none;
+}
+.btn-outline:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.btn .arrow { transition: transform 0.25s var(--ease); }
+.btn:hover .arrow { transform: translateX(3px); }
+
+/* ===== PAGE HEADER ===== */
+.page-header {
+  padding: 5rem 0 3rem;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--white) 100%);
+  text-align: center;
+}
+
+.page-header .eyebrow {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.page-header h1 {
+  margin-bottom: 1rem;
+}
+
+.page-header .lead {
+  font-size: 1.125rem;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+/* ===== HERO ===== */
+.hero {
+  padding: 5rem 0 4rem;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--white) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-text .eyebrow {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1.5px solid var(--peach);
+}
+
+.hero-text h1 { margin-bottom: 0.5rem; }
+.hero-text .subtitle {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  color: var(--accent);
+  font-weight: 400;
+  margin-bottom: 1.75rem;
+  line-height: 1.3;
+}
+
+.hero-text .lead {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--body);
+  margin-bottom: 2rem;
+  max-width: 32rem;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  background: var(--peach-light);
+}
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== QUOTE SECTION ===== */
+.quote-section {
+  background: var(--white);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.quote-section .eyebrow {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.quote-section h2 { margin-bottom: 2rem; }
+
+.quote {
+  max-width: 44rem;
+  margin: 0 auto;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: clamp(1.25rem, 2.2vw, 1.625rem);
+  line-height: 1.5;
+  color: var(--navy);
+  position: relative;
+  padding: 0 2rem;
+}
+
+.quote::before, .quote::after {
+  font-family: 'Fraunces', serif;
+  color: var(--accent);
+  font-size: 3rem;
+  line-height: 0;
+  position: relative;
+  top: 0.4em;
+}
+.quote::before { content: 'C'; margin-right: 0.25rem; }
+.quote::after { content: 'D'; margin-left: 0.25rem; }
+
+.quote-attribution {
+  margin-top: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 0.9375rem;
+  color: var(--body);
+  letter-spacing: 0.04em;
+}
+.quote-attribution::before { content: '4 '; color: var(--accent); }
+
+/* ===== SECTIONS ===== */
+section { padding: 5.5rem 0; }
+
+.section-intro {
+  max-width: 44rem;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+}
+
+.section-intro .eyebrow {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 48px;
+  height: 2px;
+  background: var(--accent);
+  margin: 0 auto 1.5rem;
+  border: none;
+}
+
+/* ===== CARDS (aanbod homepage / aanbod-pagina) ===== */
+.bg-soft { background: var(--bg); }
+.bg-white { background: var(--white); }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-image {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--peach-light);
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s var(--ease);
+}
+.card:hover .card-image img { transform: scale(1.04); }
+
+.card-body {
+  padding: 1.75rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--peach-light);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.card-body h3 { color: var(--primary); }
+
+.card-body p {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  flex: 1;
+  margin-bottom: 1.25rem;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  transition: gap 0.25s var(--ease);
+}
+.card-link:hover {
+  color: var(--accent);
+  gap: 0.6rem;
+}
+
+/* ===== OVER ===== */
+.over-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.over-image {
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  background: var(--peach-light);
+}
+.over-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.over h2 em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.over-text .eyebrow {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.signature {
+  margin-top: 2rem;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1.125rem;
+  color: var(--primary);
+}
+.signature::before { content: '4 '; color: var(--accent); }
+
+/* ===== PORTFOLIO GALLERIJ ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  background: var(--white);
+  border: 1px solid var(--line);
+  display: block;
+  cursor: pointer;
+  position: relative;
+}
+
+.gallery-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 1 / 1;
+  transition: transform 0.5s var(--ease);
+}
+
+.gallery-item:hover img { transform: scale(1.05); }
+
+.gallery-item.wide img { aspect-ratio: 4 / 3; }
+.gallery-item.tall img { aspect-ratio: 3 / 4; }
+
+.gallery-caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(21, 27, 79, 0.85) 100%);
+  color: var(--white);
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 0.9375rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s var(--ease);
+}
+
+.gallery-item:hover .gallery-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== NIEUWS ===== */
+.nieuws-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.news-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s var(--ease);
+  display: flex;
+  flex-direction: column;
+}
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.news-image {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--peach-light);
+}
+.news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s var(--ease);
+}
+.news-card:hover .news-image img { transform: scale(1.04); }
+
+.news-body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-2);
+  margin-bottom: 0.625rem;
+}
+
+.news-body h3 {
+  font-size: 1.1875rem;
+  margin-bottom: 0.625rem;
+  color: var(--primary);
+}
+
+.news-body p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+/* ===== AANBOD ITEMS (lijst-stijl) ===== */
+.aanbod-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.aanbod-item {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.75rem;
+  align-items: start;
+  transition: all 0.3s var(--ease);
+}
+
+.aanbod-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.aanbod-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--peach-light);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.aanbod-item h3 {
+  margin-bottom: 0.625rem;
+}
+
+.aanbod-item p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* ===== CONTACT ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-info h2 em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.contact-info .eyebrow {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.contact-info .lead {
+  font-size: 1.0625rem;
+  margin-bottom: 2.5rem;
+  max-width: 28rem;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--peach-light);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--primary);
+}
+
+.contact-item strong {
+  display: block;
+  color: var(--navy);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+}
+
+.contact-item a, .contact-item span.value {
+  color: var(--body);
+  font-size: 1rem;
+}
+.contact-item a:hover { color: var(--accent); }
+
+.contact-form {
+  background: var(--bg);
+  padding: 2.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+}
+
+.form-group { margin-bottom: 1.25rem; }
+
+label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem;
+  color: var(--navy);
+  transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(250, 92, 12, 0.1);
+}
+
+textarea { resize: vertical; min-height: 120px; }
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 3.5rem 0 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+footer h4 {
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.25rem;
+}
+
+.footer-brand img {
+  height: 56px;
+  width: auto;
+  margin-bottom: 1rem;
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+}
+.footer-brand p {
+  max-width: 24rem;
+  line-height: 1.7;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+footer a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s var(--ease);
+}
+footer a:hover { color: var(--peach); }
+
+.footer-bottom {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== LIGHTBOX (portfolio) ===== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(21, 27, 79, 0.92);
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  cursor: zoom-out;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: var(--white);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  font-size: 1.25rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .hero-grid, .over-grid, .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .card-grid, .nieuws-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .aanbod-item {
+    padding: 1.75rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  nav ul { gap: 1.25rem; }
+  section { padding: 4rem 0; }
+  .hero { padding: 3rem 0 2.5rem; }
+  .page-header { padding: 3rem 0 2rem; }
+  .quote-section { padding: 3.5rem 0; }
+}
+
+@media (max-width: 560px) {
+  nav ul {
+    gap: 0.875rem;
+    font-size: 0.875rem;
+  }
+  nav a { font-size: 0.8125rem; }
+  .container { padding: 0 1.25rem; }
+  .quote { padding: 0 1rem; }
+  .gallery-grid { gap: 0.75rem; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar-wrap">
+    <div class="topbar-contact">
+      <a href="tel:+31627167879">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        06 - 2716 7879
+      </a>
+      <a href="mailto:jacqueline@jb-atelier.nl">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        jacqueline@jb-atelier.nl
+      </a>
+    </div>
+    <div class="topbar-social">
+      <a href="https://www.instagram.com/jacqueline_brincker/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="https://www.facebook.com/atelier026" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/jacqueline-brincker-442781a9/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo-link">
+      <img src="https://www.jb-atelier.nl/wp-content/uploads/2023/09/logo-uitwerking-KLEIN.png" alt="JB-atelier logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="aanbod.html">Aanbod</a></li>
+        <li><a href="over.html" class="active">Over Jacqueline</a></li>
+        <li><a href="nieuws.html">Nieuws</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <span class="eyebrow">Over Jacqueline</span>
+    <h1>Jacqueline Brincker</h1>
+    <p class="lead">
+      Beeldend kunstenaar en vakdocent kunst en beeldende vorming. Vanuit
+      het atelier in Arnhem werkzaam in onderwijs, zorg en eigen werk.
+    </p>
+  </div>
+</section>
+
+<section class="bg-white" style="padding-top: 2rem;">
+  <div class="container over-grid">
+    <div class="over-image">
+      <img src="https://www.jb-atelier.nl/wp-content/uploads/2023/09/profielfoto-ws-BG-blur-269x300.jpg" alt="Jacqueline Brincker">
+    </div>
+    <div class="over-text">
+      <span class="eyebrow">Achtergrond</span>
+      <h2>Een <em>levenslange</em> verbinding met kunst</h2>
+      <p>
+        Ik deed na mijn middelbare school een opleiding in de zorg en
+        hulpverlening in Arnhem, maar snel wist ik al dat de belangstelling
+        voor kunst groter was. In Amsterdam, waar ik lange tijd woonde en
+        werkte, voltooide ik de Hogeschool voor Kunsten (1991) met een
+        serie meubelen als afstudeerwerk.
+      </p>
+      <p>
+        Sinds 1991 ben ik werkzaam als beeldend kunstenaar en vakdocent
+        kunst en beeldende vorming in het onderwijs. Ook werkte ik als
+        individueel begeleider in de zorgsector. De kern van mijn werk is
+        het leggen van de verbinding tussen het welzijn van mensen en
+        beeldend werken. Dit doe ik op zowel het basis-, voortgezet- als
+        volwassen onderwijs en amateuronderwijs.
+      </p>
+      <p class="signature">Jacqueline Brincker</p>
+    </div>
+  </div>
+</section>
+
+<section class="quote-section">
+  <div class="container">
+    <span class="eyebrow">Motto</span>
+    <hr class="divider">
+    <p class="quote">
+      In ieder mens zit een kunstenaar, de kunst is om op een uitdagende
+      manier te prikkelen en deze beeldend tot ontplooiing te brengen.
+    </p>
+    <p class="quote-attribution">Jacqueline Brincker</p>
+  </div>
+</section>
+
+<section class="bg-soft">
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow">Werkervaring</span>
+      <hr class="divider">
+      <h2>Wat ik doe en met wie ik werk</h2>
+    </div>
+
+    <div class="aanbod-list">
+
+      <article class="aanbod-item">
+        <div class="aanbod-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div>
+          <h3>Werken in de zorg</h3>
+          <p>
+            Binnen de zorgsector heb ik een kunstatelier begeleid voor de
+            ouder wordende mens, individuele begeleiding gegeven aan
+            dementerende en zieke mensen in de thuissituatie. Ook heb ik
+            beeldende lessen gegeven voor kinderen in het AZC. Met passie
+            en plezier doe ik dit sinds 2015.
+          </p>
+        </div>
+      </article>
+
+      <article class="aanbod-item">
+        <div class="aanbod-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div>
+          <h3>Ambachtelijk werken</h3>
+          <p>
+            Vanuit eigen atelier heb ik diverse thematische workshops
+            gegeven. Ambachtelijke werken en experimenteren, dat spreekt mij
+            aan. Dit komt in mijn beeldend werk terug. De beheersing van
+            gereedschap bij het bewerken van bijvoorbeeld hout of metaal
+            vind ik essentieel.
+          </p>
+        </div>
+      </article>
+
+      <article class="aanbod-item">
+        <div class="aanbod-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M6.34 17.66l-1.41 1.41"/><path d="M19.07 4.93l-1.41 1.41"/><circle cx="12" cy="12" r="4"/></svg>
+        </div>
+        <div>
+          <h3>Recyclen en natuur</h3>
+          <p>
+            Binnen mijn werk en lessen staat het recyclen van producten
+            centraal. Dit komt voort uit mijn liefde voor de natuur. Mijn
+            inspiratie doe ik op tijdens een wandeling, fietstocht of reis.
+            Het biedt mij rust en balans. Als kind al kon ik mij verliezen
+            in een gevonden voorwerp; ik zag er een vorm en een andere
+            betekenis in, fantaseerde wat ik er mee kon doen. In de loop
+            van de jaren heb ik vele natuurlijke materialen verzameld en
+            gekoesterd: steentjes, zaaddoosjes, scherven, afvalmaterialen.
+            Soms komt een idee pas veel later en dan maak ik er iets moois
+            van of gebruik het in mijn lessen.
+          </p>
+        </div>
+      </article>
+
+      <article class="aanbod-item">
+        <div class="aanbod-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <div>
+          <h3>Het oog als uitgangspunt</h3>
+          <p>
+            Centraal staat het oog: voor het zien, kijken, ervaren en
+            inspiratie krijgen voor nieuwe vormen en betekenissen. Door
+            inspirerende lessen te bedenken en individuele begeleiding te
+            geven, met verschillende materialen, probeer ik de fantasie te
+            prikkelen. Andere culturen interesseren mij en dienen als
+            inspiratiebron.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="quote-section">
+  <div class="container">
+    <p class="quote">Ik zoek niet, ik vind.</p>
+    <p class="quote-attribution">Pablo Picasso</p>
+  </div>
+</section>
+
+<section class="bg-soft" style="padding: 4rem 0;">
+  <div class="container" style="text-align: center;">
+    <h2 style="margin-bottom: 1rem;">Benieuwd geworden?</h2>
+    <p style="margin-bottom: 2rem; max-width: 36rem; margin-left: auto; margin-right: auto;">
+      Bekijk het portfolio of het aanbod, of neem direct contact op voor
+      een gesprek over een project of workshop.
+    </p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="portfolio.html" class="btn">
+        Bekijk portfolio
+        <span class="arrow">&rarr;</span>
+      </a>
+      <a href="contact.html" class="btn btn-outline">Neem contact op</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://www.jb-atelier.nl/wp-content/uploads/2023/09/logo-uitwerking-KLEIN.png" alt="JB-atelier">
+        <p>
+          Beeldend kunstenaar en vakdocent kunst en beeldende vorming.
+          Atelier in Arnhem, voor kunstprojecten, onderwijs en
+          persoonlijke begeleiding.
+        </p>
+        <div style="display:flex; gap:0.75rem; margin-top:1.25rem;">
+          <a href="https://www.instagram.com/jacqueline_brincker/" target="_blank" rel="noopener" aria-label="Instagram" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:inline-flex;align-items:center;justify-content:center;color:#fff;transition:background 0.2s;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/atelier026" target="_blank" rel="noopener" aria-label="Facebook" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:inline-flex;align-items:center;justify-content:center;color:#fff;transition:background 0.2s;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/jacqueline-brincker-442781a9/" target="_blank" rel="noopener" aria-label="LinkedIn" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:inline-flex;align-items:center;justify-content:center;color:#fff;transition:background 0.2s;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigatie</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="aanbod.html">Aanbod</a></li>
+          <li><a href="over.html">Over Jacqueline</a></li>
+          <li><a href="nieuws.html">Nieuws</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+31627167879">+31 6 271 678 79</a></li>
+          <li><a href="mailto:jacqueline@jb-atelier.nl">jacqueline@jb-atelier.nl</a></li>
+          <li>Arnhem, Nederland</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Jacqueline Brincker Atelier</span>
+      <a href="#">Privacyverklaring</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Eenvoudige lightbox voor portfolio
+document.addEventListener('DOMContentLoaded', function() {
+  const items = document.querySelectorAll('.gallery-item');
+  if (!items.length) return;
+
+  const lightbox = document.createElement('div');
+  lightbox.className = 'lightbox';
+  lightbox.innerHTML = '<button class="lightbox-close" aria-label="Sluiten">&times;</button><img alt="">';
+  document.body.appendChild(lightbox);
+
+  const img = lightbox.querySelector('img');
+  const close = lightbox.querySelector('.lightbox-close');
+
+  items.forEach(item => {
+    item.addEventListener('click', e => {
+      const src = item.querySelector('img').getAttribute('src');
+      const alt = item.querySelector('img').getAttribute('alt') || '';
+      img.src = src;
+      img.alt = alt;
+      lightbox.classList.add('open');
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    img.src = '';
+  }
+
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox || e.target === close) closeLightbox();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+});
+
+</script>
+</body>
+</html>
