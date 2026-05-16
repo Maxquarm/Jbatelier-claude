@@ -1008,6 +1008,38 @@ footer a:hover { color: var(--peach); }
   .gallery-grid { gap: 0.75rem; }
 }
 
+
+/* ===== AANBOD ACCORDION ===== */
+.aanbod-body { display: flex; flex-direction: column; }
+.aanbod-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  margin-top: 0.875rem;
+  transition: all 0.2s var(--ease);
+  align-self: flex-start;
+  line-height: 1;
+}
+.aanbod-toggle:hover,
+.aanbod-toggle[aria-expanded="true"] { background: var(--primary); color: var(--white); }
+.toggle-icon { transition: transform 0.3s var(--ease); display: inline-block; font-size: 0.625rem; }
+.aanbod-toggle[aria-expanded="true"] .toggle-icon { transform: rotate(180deg); }
+.aanbod-detail { max-height: 0; overflow: hidden; transition: max-height 0.45s ease, opacity 0.3s ease; opacity: 0; }
+.aanbod-detail.open { max-height: 900px; opacity: 1; }
+.aanbod-detail-content { padding-top: 1.25rem; border-top: 1px solid var(--line); margin-top: 1.25rem; }
+.aanbod-detail-content > p { font-size: 0.9375rem; color: var(--body); margin-bottom: 1rem; }
+.aanbod-photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.625rem; }
+.aanbod-photos img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius-sm); display: block; }
+@media (max-width: 600px) { .aanbod-photos { grid-template-columns: repeat(2, 1fr); } }
 </style>
 </head>
 <body>
@@ -1081,13 +1113,20 @@ footer a:hover { color: var(--peach); }
         <div class="aanbod-img" style="width:160px;flex-shrink:0;border-radius:var(--radius-md);overflow:hidden;aspect-ratio:4/3;background:var(--peach-light);">
           <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2023/09/IMG_20171007_133048-HOME-I-5-768x496.jpg" alt="Kunst en beeldend werken" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
-        <div>
+        <div class="aanbod-body">
           <h3>Kunst en beeldend werken</h3>
-          <p>
-            Algemene begeleiding in beeldend werken, met aandacht voor het
-            proces en het persoonlijke verhaal. Voor groepen of individuen
-            die willen ontdekken wat beeldend werken voor hen kan betekenen.
-          </p>
+          <p>Algemene begeleiding in beeldend werken, met aandacht voor het proces en het persoonlijke verhaal. Voor groepen of individuen die willen ontdekken wat beeldend werken voor hen kan betekenen.</p>
+          <button class="aanbod-toggle" aria-expanded="false">Meer informatie <span class="toggle-icon">&#9660;</span></button>
+          <div class="aanbod-detail">
+            <div class="aanbod-detail-content">
+              <p>Diverse thema's uit de kunst kunnen onderwerp zijn van de beeldende les voor het basis- en voortgezet onderwijs. Denk aan stoepkrijtkunst, vlinder-collages, portretwerk en 3D-sculpturen. Mogelijkheden worden altijd in overleg met de opdrachtgever bepaald.</p>
+              <div class="aanbod-photos">
+                <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2025/09/stoepkrijtende-kinderen.jpg" alt="Stoepkrijtkunst">
+                <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2025/09/vlinder-collage-maken.jpg" alt="Vlinder collage">
+                <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2025/09/portretten-ob.jpg" alt="Portretwerk">
+              </div>
+            </div>
+          </div>
         </div>
       </article>
 
@@ -1095,13 +1134,20 @@ footer a:hover { color: var(--peach); }
         <div class="aanbod-img" style="width:160px;flex-shrink:0;border-radius:var(--radius-md);overflow:hidden;aspect-ratio:4/3;background:var(--peach-light);">
           <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2023/09/acrylop-karton-summer-002-768x494.jpg" alt="Teken- en schildertechnieken" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
-        <div>
+        <div class="aanbod-body">
           <h3>Teken- en schildertechnieken</h3>
-          <p>
-            Lessen in tekenen en schilderen, van basis tot verdieping. Werken
-            met potlood, houtskool, pastel, aquarel, acryl en gemengde
-            technieken. Aandacht voor compositie, kleur en eigen handschrift.
-          </p>
+          <p>Lessen in tekenen en schilderen, van basis tot verdieping. Werken met potlood, houtskool, pastel, aquarel, acryl en gemengde technieken. Aandacht voor compositie, kleur en eigen handschrift.</p>
+          <button class="aanbod-toggle" aria-expanded="false">Meer informatie <span class="toggle-icon">&#9660;</span></button>
+          <div class="aanbod-detail">
+            <div class="aanbod-detail-content">
+              <p>Zelfportret, landschap, waarneming, natuur, kleuronderzoek en collage. Lessen voor basisschool, voortgezet onderwijs, individuele begeleiding en senioren. Elke les wordt afgestemd op het niveau en de leervraag van de deelnemers.</p>
+              <div class="aanbod-photos">
+                <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2025/02/tekenen-en-schilderen-bijschrift-kunstklas-basisschool-1-scaled.webp" alt="Kunstklas basisschool">
+                <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2023/09/zelfportret-2-bo.jpg" alt="Zelfportret">
+                <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2023/09/ouderen-atelier-1.jpg" alt="Senioren atelier">
+              </div>
+            </div>
+          </div>
         </div>
       </article>
 
@@ -1109,14 +1155,20 @@ footer a:hover { color: var(--peach); }
         <div class="aanbod-img" style="width:160px;flex-shrink:0;border-radius:var(--radius-md);overflow:hidden;aspect-ratio:4/3;background:var(--peach-light);">
           <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2023/09/IMG_20230221_151107-768x763.jpg" alt="Ambachtelijk werken" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
-        <div>
+        <div class="aanbod-body">
           <h3>Ambachtelijk werken</h3>
-          <p>
-            Werken met de handen en met gereedschap. Hout, metaal en
-            gevonden materialen worden bewerkt tot iets nieuws. Ideaal voor
-            wie wil leren door te maken en de waarde van vakmanschap wil
-            ervaren.
-          </p>
+          <p>Werken met de handen en met gereedschap. Hout, metaal en gevonden materialen worden bewerkt tot iets nieuws. Ideaal voor wie wil leren door te maken en de waarde van vakmanschap wil ervaren.</p>
+          <button class="aanbod-toggle" aria-expanded="false">Meer informatie <span class="toggle-icon">&#9660;</span></button>
+          <div class="aanbod-detail">
+            <div class="aanbod-detail-content">
+              <p>De basis van ambachtelijke technieken: eenvoudige houtverbindingen, snijwerk, solderen en materiaalkennis. Ook mozaiek, plastisch vormgeven met papierpulp en recycle-sieraad-workshops. Geschikt voor scholen, zorginstellingen en particulieren.</p>
+              <div class="aanbod-photos">
+                <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2023/08/spijker-collectie-1.jpg" alt="Spijker collectie">
+                <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2023/09/mozaiek-ws-dille-kamile.jpg" alt="Mozaiek workshop">
+                <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2023/09/recycle-sieraad-ws.jpg" alt="Recycle sieraad">
+              </div>
+            </div>
+          </div>
         </div>
       </article>
 
@@ -1124,13 +1176,20 @@ footer a:hover { color: var(--peach); }
         <div class="aanbod-img" style="width:160px;flex-shrink:0;border-radius:var(--radius-md);overflow:hidden;aspect-ratio:4/3;background:var(--peach-light);">
           <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2023/09/sjbloondruk-serie-4-768x609.jpg" alt="Druk- en stempeltechnieken" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
-        <div>
+        <div class="aanbod-body">
           <h3>Druk- en stempeltechnieken</h3>
-          <p>
-            Linodruk, materiaaldruk, sjabloondruk, monoprint en stempelen.
-            Toegankelijke technieken die snel tot verrassende resultaten
-            leiden. Geschikt voor alle niveaus, van beginner tot gevorderd.
-          </p>
+          <p>Linodruk, materiaaldruk, sjabloondruk, monoprint en stempelen. Toegankelijke technieken die snel tot verrassende resultaten leiden. Geschikt voor alle niveaus, van beginner tot gevorderd.</p>
+          <button class="aanbod-toggle" aria-expanded="false">Meer informatie <span class="toggle-icon">&#9660;</span></button>
+          <div class="aanbod-detail">
+            <div class="aanbod-detail-content">
+              <p>Diverse druk- en stempeltechnieken worden geleerd: linodruk, sjabloondruk, monotype, materiaaldruk en stempeltechnieken. Van etsen en gevels drukken tot bloemenstempels en kaartenseries. Elke techniek levert een uniek en direct resultaat.</p>
+              <div class="aanbod-photos">
+                <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2026/02/etsen.jpg" alt="Etsen">
+                <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2026/02/gevels-gedrukt.jpg" alt="Gevels gedrukt">
+                <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2026/02/bloemen-gedrukt.jpg" alt="Bloemen gedrukt">
+              </div>
+            </div>
+          </div>
         </div>
       </article>
 
@@ -1138,13 +1197,20 @@ footer a:hover { color: var(--peach); }
         <div class="aanbod-img" style="width:160px;flex-shrink:0;border-radius:var(--radius-md);overflow:hidden;aspect-ratio:4/3;background:var(--peach-light);">
           <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2023/09/together-serie-2-768x621.jpg" alt="Maakonderwijs en projecten" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
-        <div>
+        <div class="aanbod-body">
           <h3>Maakonderwijs, projecten en lessenseries</h3>
-          <p>
-            Thematische projecten en lessenseries voor het onderwijs, opvang
-            en zorgsector. Van een eenmalige workshop tot een doorlopende
-            lessenserie. Op maat ontworpen voor de groep en de context.
-          </p>
+          <p>Thematische projecten en lessenseries voor het onderwijs, opvang en zorgsector. Van een eenmalige workshop tot een doorlopende lessenserie. Op maat ontworpen voor de groep en de context.</p>
+          <button class="aanbod-toggle" aria-expanded="false">Meer informatie <span class="toggle-icon">&#9660;</span></button>
+          <div class="aanbod-detail">
+            <div class="aanbod-detail-content">
+              <p>Ontdekken, experimenteren en creatief problemen oplossen met diverse materialen en gereedschappen. Hout- en metaalbewerking, circuitjes bouwen en windenergie-projecten. Lessen zijn toepasbaar in themaweken, verlengde leertijd of als verdieping voor natuur en techniek.</p>
+              <div class="aanbod-photos">
+                <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2026/02/collage-houtsnijwerk-169x300.jpg" alt="Houtsnijwerk collage">
+                <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2025/09/metaal-bewerking-sleutelhanger-294x300.webp" alt="Metaalbewerking">
+                <img loading="lazy" src="https://www.jb-atelier.nl/wp-content/uploads/2025/09/robot-hand-161x300.webp" alt="Robot hand techniek">
+              </div>
+            </div>
+          </div>
         </div>
       </article>
 
@@ -1314,6 +1380,15 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
+// Accordion aanbod
+document.querySelectorAll('.aanbod-toggle').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var detail = this.nextElementSibling;
+    var isOpen = detail.classList.toggle('open');
+    this.setAttribute('aria-expanded', String(isOpen));
+  });
+});
 </script>
 </body>
 </html>
