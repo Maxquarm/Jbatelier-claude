@@ -140,6 +140,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
+  overflow: visible;
   backdrop-filter: saturate(180%) blur(10px);
 }
 
@@ -356,8 +357,8 @@ nav a.active { color: var(--primary); }
   position: relative;
   top: 0.4em;
 }
-.quote::before { content: 'C'; margin-right: 0.25rem; }
-.quote::after { content: 'D'; margin-left: 0.25rem; }
+.quote::before { content: '“'; margin-right: 0.25rem; }
+.quote::after { content: '”'; margin-left: 0.25rem; }
 
 .quote-attribution {
   margin-top: 1.5rem;
@@ -367,7 +368,7 @@ nav a.active { color: var(--primary); }
   color: var(--body);
   letter-spacing: 0.04em;
 }
-.quote-attribution::before { content: '4 '; color: var(--accent); }
+.quote-attribution::before { content: '— '; color: var(--accent); }
 
 /* ===== SECTIONS ===== */
 section { padding: 5.5rem 0; }
@@ -523,7 +524,7 @@ section { padding: 5.5rem 0; }
   font-size: 1.125rem;
   color: var(--primary);
 }
-.signature::before { content: '4 '; color: var(--accent); }
+.signature::before { content: '— '; color: var(--accent); }
 
 /* ===== PORTFOLIO GALLERIJ ===== */
 .gallery-grid {
@@ -900,6 +901,55 @@ footer a:hover { color: var(--peach); }
   font-size: 1.25rem;
 }
 
+/* ===== HAMBURGER =====  */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 110;
+  flex-shrink: 0;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: all 0.3s var(--ease);
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0;
+    box-shadow: var(--shadow-md);
+    border-top: 1px solid var(--line);
+    z-index: 99;
+  }
+  nav ul.open { display: flex; }
+  nav a {
+    padding: 0.875rem 2rem;
+    display: block;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .hero-grid, .over-grid, .contact-grid {
@@ -976,6 +1026,11 @@ footer a:hover { color: var(--peach); }
     <a href="index.html" class="logo-link">
       <img src="https://www.jb-atelier.nl/wp-content/uploads/2023/09/logo-uitwerking-KLEIN.png" alt="JB-atelier logo">
     </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -1191,13 +1246,34 @@ footer a:hover { color: var(--peach); }
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Jacqueline Brincker Atelier</span>
-      <a href="#">Privacyverklaring</a>
+      <span>&copy; <span id="yr"></span> Jacqueline Brincker Atelier</span>
+      <a href="https://www.jb-atelier.nl/privacyverklaring/">Privacyverklaring</a>
     </div>
   </div>
 </footer>
 
 <script>
+document.getElementById('yr') && (document.getElementById('yr').textContent = new Date().getFullYear());
+
+// Hamburger menu
+(function() {
+  var btn = document.getElementById('hamburger');
+  var menu = document.querySelector('nav ul');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function() {
+    var open = menu.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+  });
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+
 // Eenvoudige lightbox voor portfolio
 document.addEventListener('DOMContentLoaded', function() {
   const items = document.querySelectorAll('.gallery-item');
