@@ -655,6 +655,34 @@ section { padding: 5.5rem 0; }
   margin-bottom: 1rem;
 }
 
+/* ===== UITGELICHT (video) ===== */
+.uitgelicht {
+  display: grid;
+  grid-template-columns: minmax(0, 360px) 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+.uitgelicht video {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  display: block;
+  background: var(--peach-light);
+}
+.uitgelicht h2 { color: var(--primary); margin-bottom: 0.75rem; }
+.uitgelicht p { line-height: 1.7; margin-bottom: 1rem; }
+@media (max-width: 760px) {
+  .uitgelicht { grid-template-columns: 1fr; padding: 1.25rem; gap: 1.25rem; }
+  .uitgelicht video { max-width: 360px; margin: 0 auto; }
+}
+
 /* ===== AANBOD ITEMS (lijst-stijl) ===== */
 .aanbod-list {
   display: flex;
@@ -1074,6 +1102,23 @@ footer a:hover { color: var(--peach); }
 
 <section class="bg-white" style="padding-top: 2rem;">
   <div class="container">
+    <article class="uitgelicht">
+      <video src="media/tassen.mp4" poster="media/tassen-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video: de nieuwe tassen wisselen elkaar af voor de groene deur"></video>
+      <div>
+        <span class="news-tag">Nieuw in het atelier</span>
+        <h2>Nieuwe tassen uit het atelier</h2>
+        <p>
+          In het atelier zijn nieuwe katoenen tassen bedrukt, elk met een eigen
+          ontwerp: bloemen, vogels, kruiden en de levensboom in blauw, goud,
+          roze en zwart. Iedere tas is met de hand gestempeld en daardoor uniek.
+        </p>
+        <p>
+          In de video zie je ze voorbijkomen, gefotografeerd tegen de groene
+          deur van het atelier.
+        </p>
+        <a href="contact.html" class="card-link">Vragen of interesse? Neem contact op &rarr;</a>
+      </div>
+    </article>
     <div class="nieuws-grid">
 
       <article class="news-card">
